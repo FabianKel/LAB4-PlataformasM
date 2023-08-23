@@ -1,5 +1,6 @@
 package com.kelson.laboratorio4
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -19,13 +20,14 @@ import coil.compose.rememberAsyncImagePainter
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-
 
 
 class MainActivity : ComponentActivity() {
@@ -62,6 +64,10 @@ fun MainScreen() {
                 fontWeight = FontWeight.Bold
             )
         )
+
+
+
+        
         val imagePainter = rememberAsyncImagePainter(model = "https://aprende.guatemala.com/wp-content/uploads/2021/06/C%C3%B3mo-solicitar-una-beca-en-la-Universidad-del-Valle-de-Guatemala..jpg")
         Image(
             painter= imagePainter,
